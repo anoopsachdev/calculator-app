@@ -14,10 +14,13 @@ def divide(a, b):
         return "Error: division by zero"
     return a / b
 
-OPERATIONS = {"+": add, "-": subtract, "*": multiply, "/": divide}
+def modulus(a, b):
+    return a % b
+
+OPERATIONS = {"+": add, "-": subtract, "*": multiply, "/": divide, "%": modulus}
 
 if __name__ == "__main__":
     a = float(input("First number: "))
-    op = input("Operation (+ - * /): ")
+    op = input("Operation (+ - * / %): ")
     b = float(input("Second number: "))
     print("Result:", OPERATIONS[op](a, b))
